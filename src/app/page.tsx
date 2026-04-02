@@ -4,9 +4,10 @@ import PlayKidsAudio from "@/components/PlayKidsAudio";
 
 export default function Home() {
   return (
+
     
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <PlayKidsAudio/>
+    <div className="flex flex-col flex-1 items-center justify-center font-sans bg-black">
+      
       <div className="items-center ">
         <FuzzyText
           baseIntensity={0.2}
@@ -17,6 +18,8 @@ export default function Home() {
         >
           200:OK
         </FuzzyText>
+
+
         <FuzzyText
           baseIntensity={0.2}
           hoverIntensity={0.5}
@@ -27,6 +30,10 @@ export default function Home() {
           WELCOME TO VIGNESHTD.COM
         </FuzzyText>
       </div>
+      <div className="fixed bottom-4 right-4 z-50"> 
+        <PlayKidsAudio/>
+      </div>
     </div>
+    
   );
 }

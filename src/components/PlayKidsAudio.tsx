@@ -1,7 +1,13 @@
 "use client";
 
+// <Button size="icon-xs" aria-label="Submit" variant="outline">
+//           <ArrowUpRightIcon />
+//         </Button>
+
 import { useRef, useState } from "react";
 import { Button } from "./ui/button";
+import { Volume2, VolumeX } from "lucide-react";
+
 
 export default function PlayKidsAudio() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -9,7 +15,11 @@ export default function PlayKidsAudio() {
 
   return (
     <>
-      <Button variant="outline"
+      <Button 
+      variant="secondary"
+      size="icon-lg"
+      aria-label="Mute/unmute"
+      
 
         onClick={() => {
           const audio = audioRef.current;
@@ -26,7 +36,7 @@ export default function PlayKidsAudio() {
           }
         }}
       >
-        {isPlaying ? "🔊" : "🔇" }
+        {isPlaying ? <Volume2/> : <VolumeX/> }
       </Button>
       <audio ref={audioRef} src="/audio/Kids.mp3" preload="auto" />
     </>
