@@ -1,13 +1,25 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import { TypographyH1, TypographyH2 } from "@/components/typography/TypographyH1";
 import ShinyText from "@/components/ShinyText";
 
 import { Button } from "@/components/ui/button";
 import { SocialIcon } from 'react-social-icons'
-import { GitHubCalendar } from "react-github-calendar";
+import dynamic from "next/dynamic";
+
+import { Card, CardTitle, CardContent, CardDescription, CardAction, CardHeader } from "@/components/ui/card";
+
+const GitHubCalendar = dynamic(
+  () =>
+    import("react-github-calendar").then(
+      (mod) => mod.GitHubCalendar
+    ),
+  { ssr: false }
+);
+
 
 export default function Home() {
   return (
@@ -29,8 +41,6 @@ export default function Home() {
       <div className="p-3"> </div>
 
       <div className="text-center">
-        {/* <TypographyH2>hai, namaste im</TypographyH2> */}
-
         <ShinyText
           text="namaste! meet myself"
           speed={2}
@@ -62,24 +72,53 @@ export default function Home() {
             <SocialIcon network="instagram"
               bgColor="black" fgColor="white" />
           </Button>
-          <Button variant="outline" size="icon-lg" aria-label="Submit">
+          <Button variant="outline"
+            size="icon-lg"
+            aria-label="Watch Onlyfans"
+            onClick={() => window.open("https://www.youtube.com/watch?v=8On78J3vLr4", "_blank")}>
             <SocialIcon network="onlyfans"
               bgColor="black" fgColor="white" />
+
           </Button>
         </div>
         {/* <-----------Social Group---------> */}
 
 
         <div className="p-3"> </div>
-        <GitHubCalendar
-        username="vignexshh"
-        blockSize={7}
-        blockMargin={2}
-        fontSize={8}
-      />
+
+        {/* <--------- github calendar ------------> */}
+        <div className="hidden md:block items-center justify-center">
+          <div>
+            <GitHubCalendar
+              username="ascorbic"
+              blockSize={7}
+              blockMargin={2}
+              fontSize={8}
+            />
+          </div>
+        </div>
+        {/* <--------- end of github calendar ------------> */}
+        <div className="p-3"> </div>
 
 
-        
+        <div className="items-center">
+          <Card className="w-full max-w-sm text-left">
+            <CardHeader>
+              <CardTitle>Login to your account</CardTitle>
+              <CardDescription>
+                Enter your email below to login to your account
+              </CardDescription>
+            </CardHeader>
+          </Card>
+        </div>
+
+
+
+
+
+
+
+
       </div>
 
 
