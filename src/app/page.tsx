@@ -106,13 +106,13 @@ export default function Home() {
             <div className="">
 
               <AuroraShader
-                colorStops={['#00ff91', '#7cff67', '#20a151']}
+                colorStops={['#2bff64', '#7cff67', '#20a151']}
                 amplitude={1.0}
                 blend={0.5}
                 speed={0.5}
               />
 
-              <div className="relative z-10 mt-2 ml-3 text-green-200 ">
+              <div className="relative z-10 mt-2 ml-3 dark:text-green-950 text-green-950">
                 <TypographyH4>
                   Python
                 </TypographyH4>
@@ -123,16 +123,14 @@ export default function Home() {
           <div className="overflow-hidden relative w-24 sm:w-24 md:w-36 h-32 bg-orange-950 rounded-[20px] text-left">
             <div className="">
 
-              <div className="relative z-10 mt-2 ml-3 text-orange-300 ">
+              <div className="relative z-10 mt-2 ml-3 dark:text-orange-950 text-orange-950">
                 <TypographyH4>
                   Rust
                 </TypographyH4>
               </div>
 
-
-
               <AuroraShader
-                colorStops={['#ff8800', '#a64000', '#5c0600']}
+                colorStops={['#ffc400', '#a64000', '#5c0600']}
                 amplitude={1.0}
                 blend={0.5}
                 speed={0.5}
