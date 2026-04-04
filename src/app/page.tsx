@@ -9,7 +9,13 @@ import { Button } from "@/components/ui/button";
 import { SocialIcon } from 'react-social-icons'
 import dynamic from "next/dynamic";
 
+// import { CircularProgressbar } from 'react-circular-progressbar';
+// import 'react-circular-progressbar/dist/styles.css';
+
+
 import AuroraShader from "@/components/lightswind/aurora-shader";
+
+const pypercentage = 74;
 const GitHubCalendar = dynamic(
   () =>
     import("react-github-calendar").then(
@@ -112,10 +118,13 @@ export default function Home() {
                 speed={2}
               />
 
-              <div className="relative z-10 mt-2 ml-3 dark:text-green-950 text-green-950">
+              <div className="flex relative z-10 mt-2 ml-3 dark:text-green-950 text-green-950">
                 <TypographyH4>
                   Python
                 </TypographyH4>
+                
+                
+
               </div>
 
             </div>
