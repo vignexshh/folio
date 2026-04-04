@@ -34,7 +34,7 @@ export default function Home() {
 
       <div className="relative h-32 w-32 overflow-hidden rounded-full border-2 border-green-500">
         <Image
-          src={"/pp.jpeg"} // Fallback image
+          src={"/pp_holographic.png"} // Fallback image
           alt="Vignesh T D's Profile Image"
           fill
           className="object-cover"
@@ -42,7 +42,7 @@ export default function Home() {
           sizes="128px"
         />
       </div>
-      
+
 
       <div className="text-center rounded-[40px] w-auto p-10">
         <ShinyText
@@ -107,8 +107,10 @@ export default function Home() {
         {/* <--------- end of github calendar ------------> */}
         <div className="p-3"> </div>
 
-        <div className="flex gap-2 items-center justify-center">
+        <div className="flex gap-2 items-center justify-center ">
           <div className="overflow-hidden bg-green-950 relative w-48 sm:w-48 md:w-72 h-32 rounded-[20px] text-left">
+          {/* <div className="overflow-hidden bg-green-950 relative w-2/3 h-32 rounded-[20px] text-left"> */}
+
             <div className="">
 
               <AuroraShader
@@ -122,8 +124,8 @@ export default function Home() {
                 <TypographyH4>
                   Python
                 </TypographyH4>
-                
-                
+
+
 
               </div>
 
