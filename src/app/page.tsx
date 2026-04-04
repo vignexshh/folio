@@ -11,6 +11,7 @@ import { SocialIcon } from 'react-social-icons'
 import dynamic from "next/dynamic";
 
 import { Card, CardTitle, CardContent, CardDescription, CardAction, CardHeader } from "@/components/ui/card";
+import { Squircle } from 'corner-smoothing'
 
 const GitHubCalendar = dynamic(
   () =>
@@ -25,7 +26,7 @@ export default function Home() {
   return (
 
 
-    <div className="flex flex-col flex-1 font-sans text-zinc-50 items-center ">
+    <div className="flex flex-col flex-1 font-sans text-zinc-50 items-center">
       <div className="p-10"> </div>
 
       <div className="relative h-32 w-32 overflow-hidden rounded-full">
@@ -40,7 +41,7 @@ export default function Home() {
       </div>
       <div className="p-3"> </div>
 
-      <div className="text-center">
+      <div className="text-center border-amber-100 border w-auto p-5">
         <ShinyText
           text="namaste! meet myself"
           speed={2}
@@ -87,8 +88,8 @@ export default function Home() {
         <div className="p-3"> </div>
 
         {/* <--------- github calendar ------------> */}
-        <div className="hidden md:block items-center justify-center">
-          <div>
+        <div className="hidden md:flex items-center justify-center">
+          <div className="flex items-center justify-center">
             <GitHubCalendar
               username="ascorbic"
               blockSize={7}
@@ -97,20 +98,16 @@ export default function Home() {
             />
           </div>
         </div>
+
         {/* <--------- end of github calendar ------------> */}
         <div className="p-3"> </div>
 
-
-        <div className="items-center">
-          <Card className="w-full max-w-sm text-left">
-            <CardHeader>
-              <CardTitle>Login to your account</CardTitle>
-              <CardDescription>
-                Enter your email below to login to your account
-              </CardDescription>
-            </CardHeader>
-          </Card>
+        <div className="flex gap-2 items-center  justify-center">
+          <div className="w-64 h-16 bg-amber-500 rounded-[15px] border border-white" />
+          <div className="w-32 h-16 bg-red-600 rounded-[15px] border border-white" />
         </div>
+
+
 
 
 
@@ -120,23 +117,6 @@ export default function Home() {
 
 
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-      {/* <------------ audio control component ---------->*/}
-      {/* <div className="fixed bottom-4 right-4 z-50"> 
-        <PlayKidsAudio/>
-      </div> */}
-      {/* <------------ audio control component ---------->*/}
     </div>
 
   );

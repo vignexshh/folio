@@ -16,7 +16,6 @@ export default function PlayKidsAudio() {
 
   return (
     <>
-      
           <Button
             variant="secondary"
             size="icon-lg"
@@ -37,8 +36,6 @@ export default function PlayKidsAudio() {
             {isPlaying ? <Volume2 /> : <VolumeX />}
           </Button>
           <audio ref={audioRef} src="/audio/Kids.mp3" preload="auto" />
-
-
 
     </>
   );
