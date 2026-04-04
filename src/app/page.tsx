@@ -109,7 +109,7 @@ export default function Home() {
                 colorStops={['#2bff64', '#7cff67', '#20a151']}
                 amplitude={1.0}
                 blend={0.5}
-                speed={0.5}
+                speed={2}
               />
 
               <div className="relative z-10 mt-2 ml-3 dark:text-green-950 text-green-950">
@@ -133,7 +133,7 @@ export default function Home() {
                 colorStops={['#ffc400', '#a64000', '#5c0600']}
                 amplitude={1.0}
                 blend={0.5}
-                speed={0.5}
+                speed={2}
               />
 
 
