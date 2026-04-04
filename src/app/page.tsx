@@ -36,7 +36,7 @@ export default function Home() {
           sizes="128px"
         />
       </div>
-      <div className="p-3"> </div>
+      
 
       <div className="text-center rounded-[40px] w-auto p-10">
         <ShinyText
