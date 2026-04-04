@@ -85,11 +85,13 @@ export default function Home() {
         <div className="p-3"> </div>
 
         {/* <--------- github calendar ------------> */}
-        <div className="hidden md:flex items-center justify-center">
-          <div className="flex items-center justify-center">
+        {/* <div className="hidden md:flex items-center justify-center"> */}
+        <div className="overflow-scroll flex items-center justify-center">
+
+          <div className="flex  w-72  md:w-full items-center justify-center">
             <GitHubCalendar
               username="ascorbic"
-              blockSize={7}
+              blockSize={12}
               blockMargin={2}
               fontSize={8}
             />
@@ -102,7 +104,7 @@ export default function Home() {
         <div className="flex gap-2 items-center justify-center">
           <div className="overflow-hidden bg-green-950 relative w-48 sm:w-48 md:w-72 h-32 rounded-[20px] text-left">
             <div className="">
-              
+
               <AuroraShader
                 colorStops={['#00ff91', '#7cff67', '#20a151']}
                 amplitude={1.0}
@@ -110,32 +112,32 @@ export default function Home() {
                 speed={0.5}
               />
 
-              <div className="relative z-10 mt-2 ml-3 text-green-200 "> 
-              <TypographyH4>
-                Python
-              </TypographyH4>
+              <div className="relative z-10 mt-2 ml-3 text-green-200 ">
+                <TypographyH4>
+                  Python
+                </TypographyH4>
               </div>
 
             </div>
           </div>
           <div className="overflow-hidden relative w-24 sm:w-24 md:w-36 h-32 bg-orange-950 rounded-[20px] text-left">
             <div className="">
-              
-              <div className="relative z-10 mt-2 ml-3 text-orange-300 "> 
-              <TypographyH4>
-                Rust
-              </TypographyH4>
+
+              <div className="relative z-10 mt-2 ml-3 text-orange-300 ">
+                <TypographyH4>
+                  Rust
+                </TypographyH4>
               </div>
 
 
-            
+
               <AuroraShader
                 colorStops={['#ff8800', '#a64000', '#5c0600']}
                 amplitude={1.0}
                 blend={0.5}
                 speed={0.5}
               />
-              
+
 
             </div>
           </div>
