@@ -2,17 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
-
-import { TypographyH1, TypographyH2 } from "@/components/typography/TypographyH1";
+import { TypographyH1, TypographyH2, TypographyH4 } from "@/components/typography/Typograpy"
 import ShinyText from "@/components/ShinyText";
 
 import { Button } from "@/components/ui/button";
 import { SocialIcon } from 'react-social-icons'
 import dynamic from "next/dynamic";
 
-import { Card, CardTitle, CardContent, CardDescription, CardAction, CardHeader } from "@/components/ui/card";
-import { Squircle } from 'corner-smoothing'
-
+import AuroraShader from "@/components/lightswind/aurora-shader";
 const GitHubCalendar = dynamic(
   () =>
     import("react-github-calendar").then(
@@ -29,7 +26,7 @@ export default function Home() {
     <div className="flex flex-col flex-1 font-sans text-zinc-50 items-center">
       <div className="p-10"> </div>
 
-      <div className="relative h-32 w-32 overflow-hidden rounded-full">
+      <div className="relative h-32 w-32 overflow-hidden rounded-full ">
         <Image
           src={"/pp.jpeg"} // Fallback image
           alt="Vignesh T D's Profile Image"
@@ -41,7 +38,7 @@ export default function Home() {
       </div>
       <div className="p-3"> </div>
 
-      <div className="text-center border-amber-100 border w-auto p-5">
+      <div className="text-center  border  rounded-[40px] w-auto p-10">
         <ShinyText
           text="namaste! meet myself"
           speed={2}
@@ -102,10 +99,48 @@ export default function Home() {
         {/* <--------- end of github calendar ------------> */}
         <div className="p-3"> </div>
 
-        <div className="flex gap-2 items-center  justify-center">
-          <div className="w-64 h-16 bg-amber-500 rounded-[15px] border border-white" />
-          <div className="w-32 h-16 bg-red-600 rounded-[15px] border border-white" />
+        <div className="flex gap-2 items-center justify-center">
+          <div className="overflow-hidden bg-green-950 relative w-48 sm:w-48 md:w-72 h-32 rounded-[20px] text-left">
+            <div className="">
+              
+              <AuroraShader
+                colorStops={['#00ff91', '#7cff67', '#20a151']}
+                amplitude={1.0}
+                blend={0.5}
+                speed={0.5}
+              />
+
+              <div className="relative z-10 mt-2 ml-3 text-green-200 "> 
+              <TypographyH4>
+                Python
+              </TypographyH4>
+              </div>
+
+            </div>
+          </div>
+          <div className="overflow-hidden relative w-24 sm:w-24 md:w-36 h-32 bg-orange-950 rounded-[20px] text-left">
+            <div className="">
+              
+              <div className="relative z-10 mt-2 ml-3 text-orange-300 "> 
+              <TypographyH4>
+                Rust
+              </TypographyH4>
+              </div>
+
+
+            
+              <AuroraShader
+                colorStops={['#ff8800', '#a64000', '#5c0600']}
+                amplitude={1.0}
+                blend={0.5}
+                speed={0.5}
+              />
+              
+
+            </div>
+          </div>
         </div>
+
 
 
 

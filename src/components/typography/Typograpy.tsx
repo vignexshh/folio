@@ -4,6 +4,10 @@ type TypographyH1Props = {
 type TypographyH2Props = {
   children: React.ReactNode
 }
+type TypographyH4Props = {
+  children: React.ReactNode
+}
+
 
 export function TypographyH1({ children }: TypographyH1Props) {
   return (
@@ -18,5 +22,13 @@ export function TypographyH2({ children }: TypographyH2Props) {
     <h2 className="scroll-m-20   sm:text-2xl lg:text-2xl font-semibold tracking-tight">
       {children}
     </h2>
+  )
+}
+
+export function TypographyH4({children}: TypographyH4Props) {
+  return (
+    <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+     {children}
+    </h4>
   )
 }
