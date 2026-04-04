@@ -38,7 +38,7 @@ export default function Home() {
       </div>
       <div className="p-3"> </div>
 
-      <div className="text-center  border  rounded-[40px] w-auto p-10">
+      <div className="text-center rounded-[40px] w-auto p-10">
         <ShinyText
           text="namaste! meet myself"
           speed={2}
