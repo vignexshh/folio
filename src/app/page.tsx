@@ -24,9 +24,9 @@ export default function Home() {
 
 
     <div className="flex flex-col flex-1 font-sans text-zinc-50 items-center">
-      <div className="p-10"> </div>
+      <div className="p-8"> </div>
 
-      <div className="relative h-32 w-32 overflow-hidden rounded-full ">
+      <div className="relative h-32 w-32 overflow-hidden rounded-full border-2 border-green-500">
         <Image
           src={"/pp.jpeg"} // Fallback image
           alt="Vignesh T D's Profile Image"
