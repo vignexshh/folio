@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { SocialIcon } from 'react-social-icons'
 import dynamic from "next/dynamic";
 
+
 // import { CircularProgressbar } from 'react-circular-progressbar';
 // import 'react-circular-progressbar/dist/styles.css';
 
@@ -30,11 +31,12 @@ export default function Home() {
 
 
     <div className="flex flex-col flex-1 font-sans text-zinc-50 items-center">
+      
       <div className="p-8"> </div>
 
-      <div className="relative h-32 w-32 overflow-hidden rounded-full border-2 border-green-500">
+      <div className="relative h-32 w-32 overflow-hidden rounded-full bg-green-950 border-2 border-green-500">
         <Image
-          src={"/pp_holographic.png"} // Fallback image
+          src={"/pp.jpeg"} // Fallback image
           alt="Vignesh T D's Profile Image"
           fill
           className="object-cover"
