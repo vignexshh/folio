@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { SocialIcon } from 'react-social-icons'
 import dynamic from "next/dynamic";
 
-
+import PyChartUsageStats from "@/components/PythonUsageChart";
 // import { CircularProgressbar } from 'react-circular-progressbar';
 // import 'react-circular-progressbar/dist/styles.css';
 
@@ -114,6 +114,8 @@ export default function Home() {
           {/* <div className="overflow-hidden bg-green-950 relative w-2/3 h-32 rounded-[20px] text-left"> */}
 
             <div className="">
+
+              {/* <PyChartUsageStats/> */}
 
               <AuroraShader
                 colorStops={['#2bff64', '#7cff67', '#20a151']}
