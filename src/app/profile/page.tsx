@@ -22,10 +22,8 @@ import { GoUnmute } from "react-icons/go";
 
 export default function PortfolioPage() {
     const [visitIntent, setVisitIntent] = useState(false);
-    const [staticAudioStatus, SetstaticAudioStatus] = useState(false);
-    // const handleStaticAudio = () => {
+    const [staticAudioStatus, setStaticAudioStatus] = useState(false);
 
-    // }
     const handleIntent = () => {
         setVisitIntent(true)
         staticRadioNoiseLoop.play()
@@ -34,11 +32,11 @@ export default function PortfolioPage() {
     const handleAudio = () => {
         if (staticRadioNoiseLoop.playing()) {
             staticRadioNoiseLoop.stop();
-            SetstaticAudioStatus(false)
+            setStaticAudioStatus(false)
 
         } else {
             staticRadioNoiseLoop.play();
-            SetstaticAudioStatus(true)
+            setStaticAudioStatus(true)
         }
     }
 
@@ -53,14 +51,14 @@ export default function PortfolioPage() {
                         variant="outline" aria-label="Submit"
                         onClick={handleAudio}
                     >
-                    {staticAudioStatus ? (<GoUnmute/>) : (<GoMute/>)}
+                        {staticAudioStatus ? (<GoUnmute />) : (<GoMute />)}
                     </Button>
                 </div>
             </> : (
 
-                <div className="h-screen flex items-center justify-center bg-black text-white">
-                    <Button onClick={handleIntent} className="px-6 py-3 bg-white text-black">
-                        Enter Site
+                <div className="h-screen flex items-center justify-center bg-black font-mono">
+                    <Button onClick={handleIntent} className="px-6 py-3 bg-white text-black font-mono">
+                        Confirm and enter page
                     </Button>
                 </div>
 
