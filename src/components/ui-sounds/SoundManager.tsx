@@ -11,3 +11,9 @@ export const windowShrinkSound = new Howl({
     src: ["/window-shrink-sound.mp3"],
     volume:0.4
 });
+
+export const staticRadioNoiseLoop = new Howl({
+    src: ["/static-noise.mp3"],
+    volume:0.05,
+    loop: true
+})

@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
 
 // next.config.js
 module.exports = {
-  allowedDevOrigins: ['84ca-150-129-89-165.ngrok-free.app'],
+  allowedDevOrigins: ['6ae3-150-129-89-165.ngrok-free.app'],
   images: {
     remotePatterns: [
       {
