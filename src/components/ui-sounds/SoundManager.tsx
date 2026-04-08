@@ -17,3 +17,8 @@ export const staticRadioNoiseLoop = new Howl({
     volume:0.05,
     loop: true
 })
+
+export const intentConfirmEntrySound = new Howl({
+    src: ["/ui_intent_entry.mp3"],
+    volume:0.9,
+})
