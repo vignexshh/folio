@@ -33,9 +33,9 @@ export default function Portfolio() {
     const pathname = usePathname();
     return (
         <CRTEffect enabled={true}
-            sweepDuration={3}
-            sweepThickness={10}
-            scanlineOpacity={0.1}
+            sweepDuration={4}
+            sweepThickness={7}
+            scanlineOpacity={0.3}
             theme="blue"
             scanlineThickness={0.5}
             enableScanlines={true}
@@ -47,7 +47,7 @@ export default function Portfolio() {
             edgeGlowColor="rgba(0, 186, 255, 0.8)"
             edgeGlowSize={10}
             enableFlicker={true}>
-            <div className="bg-[#000000] bg-[url('/bg.avif')] bg-cover font-mono">
+            <div className="bg-[#000000] bg-[url('https://images.hdqwalls.com/download/windows-xp-bliss-4k-lu-1600x900.jpg')] bg-cover font-mono">
                 <div className="flex items-center justify-center h-screen border-red-600">
                     <div className={`${baseWindowClasses} ${conditionalWindowClasses}`}>
                         <div className="flex flex-1 bg-[#192936 p-3 items-center relative">
@@ -71,11 +71,11 @@ export default function Portfolio() {
                             <div className="flex flex-col w-62.5 items-left gap-2 border-2">
                                 <AsciiArt
                                     src="/pp.jpeg"
-                                    resolution={200}
+                                    resolution={100}
                                     color="#05edce"
-                                    animationStyle="fade"
+                                    animationStyle="typewriter"
                                     animateOnView={false}
-                                    animationDuration={1}
+                                    animationDuration={0.1}
                                     className="mx-auto aspect-square w-full max-w-lg bg-black"
                                 />
 
