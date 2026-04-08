@@ -16,6 +16,7 @@ import { TypeAnimation } from 'react-type-animation';
 import { TypingAnimation } from "@/components/ui/typing-animation";
 
 import { intentConfirmEntrySound } from "@/components/ui-sounds/SoundManager";
+import CRTEffect from "vault66-crt-effect";
 
 export default function PortfolioPage() {
     const [visitIntent, setVisitIntent] = useState(false);
@@ -61,31 +62,44 @@ export default function PortfolioPage() {
                     </Button>
                 </div>
             </> : (
+                <CRTEffect enabled={true}
+                    sweepDuration={3}
+                    sweepThickness={50}
+                    scanlineOpacity={0.2}
+                    theme="blue"
+                    scanlineThickness={0.5}
+                    enableScanlines={true}
+                    enableSweep={true}
+                    enableGlow={false}
+                    glowColor="rgba(0, 105, 105, 0.22)"
 
-                <div className="h-screen flex flex-col gap-0 items-center justify-center bg-[#13232a] font-mono items-left">
-                    <div className="flex flex-col overflow-hidden">
-                        <TypingAnimation className="leading-8" showCursor={false} typeSpeed={30} delay={1000}>Initializing portfolio system...</TypingAnimation>
-                        <TypingAnimation className="leading-8" showCursor={false} typeSpeed={30} delay={2000}>Loading design tokens...</TypingAnimation>
-                        <TypingAnimation className="leading-8" showCursor={false} typeSpeed={30} delay={3000}>Mounting component libaray</TypingAnimation>
-                        <TypingAnimation className="leading-10" showCursor={false} typeSpeed={50} delay={5000}>██████████████ done </TypingAnimation>
-                        <div className="pt-5 " />
+                    enableEdgeGlow={false}
+                    edgeGlowColor="rgba(0, 186, 255, 0.8)"
+                    edgeGlowSize={10}
+                    enableFlicker={true}>
 
-                        {!show ? null : <Button variant="outline"
-                            onClick={() => {
-                                handleIntent();
-                                intentConfirmEntrySound.play();
-                            }}
-                            className="px-6 py-3 bg-white font-mono">
-                            confirm intent & enter page
-                        </Button>}
+                    <div className="h-screen flex flex-col gap-0 items-center justify-center bg-[#13232a] font-mono items-left">
+                        <div className="flex flex-col overflow-hidden items-left">
+                            <TypingAnimation className="leading-8" showCursor={false} typeSpeed={50} delay={100}>Initializing portfolio system...</TypingAnimation>
+                            <TypingAnimation className="leading-8" showCursor={false} typeSpeed={30} delay={2000}>Loading design tokens...</TypingAnimation>
+                            <TypingAnimation className="leading-8" showCursor={false} typeSpeed={30} delay={3000}>Mounting component libaray</TypingAnimation>
+                            <TypingAnimation className="leading-10" showCursor={false} typeSpeed={50} delay={5000}>██████████████ done </TypingAnimation>
+                            <div className="pt-5 " />
 
-
+                            {!show ? null : <Button variant="outline"
+                                onClick={() => {
+                                    handleIntent();
+                                    intentConfirmEntrySound.play();
+                                }}
+                                className="px-6 py-3 bg-white font-mono">
+                                confirm intent & enter page
+                            </Button>}
+                        </div>
 
                     </div>
-
-                </div>
+                    </CRTEffect>
 
             )}
-        </>
-    )
-}
+                </>
+            )
+            }
