@@ -47,7 +47,7 @@ export default function Portfolio() {
             edgeGlowColor="rgba(0, 186, 255, 0.8)"
             edgeGlowSize={10}
             enableFlicker={true}>
-            <div className="bg-[#000000] bg-[url('https://images.hdqwalls.com/download/windows-xp-bliss-4k-lu-1600x900.jpg')] bg-cover font-mono">
+            <div className="bg-[#000000] bg-[url('https://512pixels.net/downloads/macos-wallpapers-thumbs/10-14-Day-Thumb.jpg')] bg-cover font-mono">
                 <div className="flex items-center justify-center h-screen border-red-600">
                     <div className={`${baseWindowClasses} ${conditionalWindowClasses}`}>
                         <div className="flex flex-1 bg-[#192936 p-3 items-center relative">
