@@ -42,7 +42,7 @@ export default function PortfolioPage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShow(true);
-    }, 17000);
+    }, 15000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -92,15 +92,15 @@ export default function PortfolioPage() {
               <TypingAnimation className="leading-7" showCursor={false} typeSpeed={0} delay={7000}>Don't search for /secrets here</TypingAnimation>
               <TypingAnimation className="leading-7" showCursor={false} typeSpeed={3} delay={8000}>Resolving 12 case studies for no REASON...</TypingAnimation>
               <TypingAnimation className="leading-7" showCursor={false} typeSpeed={3} delay={9000}>Connecting to netlify servers</TypingAnimation>
-              <TypingAnimation className="leading-7 text-[#82cf90] font-bold" showCursor={false} typeSpeed={0} delay={10000}>ok</TypingAnimation>
+              <TypingAnimation className="leading-7 text-[#82cf90] font-bold" showCursor={false} typeSpeed={0} delay={10000}>200:OK</TypingAnimation>
 
               <div className="p-5" />
 
 
               <TypingAnimation className="leading-7" showCursor={false} typeSpeed={0} delay={12000}>+</TypingAnimation>
               <div className="flex flex-row items-center gap-5">
-                <TypingAnimation className="leading-7  text-[#cf9482]" showCursor={false} typeSpeed={1} delay={13500}>vignesh.td v10.12.0</TypingAnimation>
-                <TypingAnimation className="leading-7" showCursor={false} typeSpeed={0} delay={16000}>[⬢] ready</TypingAnimation>
+                <TypingAnimation className="leading-7  text-[#cf9482]" showCursor={false} typeSpeed={1} delay={12500}>vignesh.td v10.12.0</TypingAnimation>
+                <TypingAnimation className="leading-7" showCursor={false} typeSpeed={0} delay={14000}>[⬢] ready</TypingAnimation>
 
               </div>
 
@@ -110,7 +110,7 @@ export default function PortfolioPage() {
                 <div className="items-left">
                   <Button
                     variant="default"
-                    className="bg-[#678491] hover:bg-[#aed1e1] text-[#13232a]"
+                    className="bg-[#678491] hover:bg-[#aed1e1] text-[#13232a] rounded-none cursor-pointer"
                     onClick={() => {
                       handleIntent();
                       intentConfirmEntrySound.play();

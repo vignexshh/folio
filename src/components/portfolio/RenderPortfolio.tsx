@@ -22,7 +22,11 @@ import "vault66-crt-effect/dist/vault66-crt-effect.css";
 import { AsciiArt } from "@/components/ui/ascii-art";
 
 import Editor from "@/components/slash-menu/editor";
+import { Rnd } from "react-rnd";
 
+import { Toast } from "radix-ui";
+import { toast } from "sonner";
+import { Button } from "../ui/button";
 
 
 export default function Portfolio() {
@@ -31,6 +35,20 @@ export default function Portfolio() {
     const baseWindowClasses = "transition-all duration-200 ease-out flex flex-col bg-[#0c1217] border w-full h-full overflow-hidden";
     const conditionalWindowClasses = trafficGreen ? "md:rounded-2xl md:w-2/3 md:h-2/3" : "";
     const pathname = usePathname();
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            toast("Event has been created", {
+                description: "Sunday, December 03, 2023 at 9:00 AM",
+                action: {
+                    label: "Undo",
+                    onClick: () => console.log("Undo"),
+                },
+            });
+        }, 5000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <CRTEffect enabled={true}
             sweepDuration={4}
@@ -48,8 +66,20 @@ export default function Portfolio() {
             edgeGlowSize={10}
             enableFlicker={true}>
             <div className="bg-[#000000] bg-[url('https://512pixels.net/downloads/macos-wallpapers-thumbs/10-14-Day-Thumb.jpg')] bg-cover font-mono">
-                <div className="flex items-center justify-center h-screen border-red-600">
-                    <div className={`${baseWindowClasses} ${conditionalWindowClasses}`}>
+                <div className="flex items-center justify-center h-screen">
+                    {/* <Rnd
+                        default={{
+                            x: 100,
+                            y: 100,
+                            width: 400,
+                            height: 300,
+                        }}
+                        minWidth={200}
+                        minHeight={150}
+                        bounds="window"
+
+                    > */}
+                    <div className={`${baseWindowClasses} ${conditionalWindowClasses} rounded-2xl`} >
                         <div className="flex flex-1 bg-[#192936 p-3 items-center relative">
                             <TrafficLight
                                 onMaximize={() => {
@@ -57,7 +87,12 @@ export default function Portfolio() {
                                     trafficGreen ? windowExpandSound.play() && setTrafficGreen(!trafficGreen) : windowShrinkSound.play() && setTrafficGreen(!trafficGreen);
 
 
-                                }} />
+                                }}
+
+                                onMinimize={() => toast("Event has been created", {
+                                    description: "Sunday, December 03, 2023 at 9:00 AM",
+
+                                })} />
 
 
                             <div className="absolute left-1/2 -translate-x-1/2 text-gray-500">
@@ -67,11 +102,11 @@ export default function Portfolio() {
 
                         </div>
 
-                        <div className="flex-50 bg-[#192936] p-3 border-t border-b overflow-scroll">
-                            <div className="flex flex-col w-62.5 items-left gap-2 border-2">
+                        <div className="flex-50 bg-[#192936] p-3 border-t border-b overflow-scroll text-[#40ab9c]">
+                            <div className="flex flex-col w-62.5 items-left gap-2 border border-[#05edce7d]">
                                 <AsciiArt
                                     src="/pp.jpeg"
-                                    resolution={100}
+                                    resolution={200}
                                     color="#05edce"
                                     animationStyle="matrix"
                                     animateOnView={false}
@@ -79,7 +114,7 @@ export default function Portfolio() {
                                     className="mx-auto aspect-square w-full max-w-lg bg-black"
                                 />
 
-                                <div className="text-left p-2 border-t-2">
+                                <div className="text-left p-2">
                                     <TypographyH5>Software Engg • B'luru, India</TypographyH5>
                                     <TypographyH5>vigneshtd@outlook.com</TypographyH5>
                                 </div>
@@ -87,6 +122,7 @@ export default function Portfolio() {
                                     <TypographyH5>20M, 180cm, 85kgs</TypographyH5>
                                     <TypographyH5>sleepy-head, 1800kcals/day</TypographyH5>
                                 </div>
+
                             </div>
 
 
@@ -97,6 +133,7 @@ export default function Portfolio() {
 
                         </div>
                     </div>
+                    {/* </Rnd> */}
                 </div>
             </div>
         </CRTEffect>
