@@ -18,6 +18,7 @@ import { TypingAnimation } from "@/components/ui/typing-animation";
 import { intentConfirmEntrySound } from "@/components/ui-sounds/SoundManager";
 import CRTEffect from "vault66-crt-effect";
 
+
 export default function PortfolioPage() {
   const [visitIntent, setVisitIntent] = useState(false);
   const [staticAudioStatus, setStaticAudioStatus] = useState(false);
@@ -46,6 +47,38 @@ export default function PortfolioPage() {
 
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    const keyBoardEnterHandler = (e: KeyboardEvent) => {
+      if (e.key === "Enter") {
+        setVisitIntent(true);
+        intentConfirmEntrySound.play();
+        staticRadioNoiseLoop.play();
+
+      }
+    };
+
+    window.addEventListener("keydown", keyBoardEnterHandler);
+    return () => window.removeEventListener("keydown", keyBoardEnterHandler);
+  }, []);
+
+  useEffect(() => {
+    const keyBoardMuteHandler = (e: KeyboardEvent) => {
+      if (e.key === "m") {
+        
+        // intentConfirmEntrySound.play();
+        handleAudio();
+        
+        
+
+      }
+    };
+
+    window.addEventListener("keydown", keyBoardMuteHandler);
+    return () => window.removeEventListener("keydown", keyBoardMuteHandler);
+  }, []);
+
+
 
   return (
 
@@ -83,14 +116,14 @@ export default function PortfolioPage() {
               <TypingAnimation className="leading-7" showCursor={false} typeSpeed={0} delay={100}>Initializing portfolio system...</TypingAnimation>
               <TypingAnimation className="leading-7" showCursor={false} typeSpeed={3} delay={2000}>Loading design tokens...</TypingAnimation>
               <TypingAnimation className="leading-7" showCursor={false} typeSpeed={3} delay={3000}>Mounting component libaray...</TypingAnimation>
-              <div className="flex flex-row items-center gap-5"> 
-              <TypingAnimation className="leading-15 font-bold" showCursor={false} typeSpeed={50} delay={5000}>██████████████ </TypingAnimation>
-              <TypingAnimation className="leading-15 font-bold text-[#82cf90]" showCursor={false} typeSpeed={0} delay={6000}>done</TypingAnimation>
+              <div className="flex flex-row items-center gap-5">
+                <TypingAnimation className="leading-15 font-bold" showCursor={false} typeSpeed={50} delay={5000}>██████████████ </TypingAnimation>
+                <TypingAnimation className="leading-15 font-bold text-[#82cf90]" showCursor={false} typeSpeed={0} delay={6000}>done</TypingAnimation>
               </div>
               <div className="p-5" />
 
-              <TypingAnimation className="leading-7" showCursor={false} typeSpeed={0} delay={7000}>Don't search for /secrets here</TypingAnimation>
-              <TypingAnimation className="leading-7" showCursor={false} typeSpeed={3} delay={8000}>Resolving 12 case studies for no REASON...</TypingAnimation>
+              <TypingAnimation className="leading-7 text-wrap" showCursor={false} typeSpeed={0} delay={7000}>Don't search for /secrets here</TypingAnimation>
+              <TypingAnimation className="leading-7" showCursor={false} typeSpeed={3} delay={8000}>Resolving 12 cases...</TypingAnimation>
               <TypingAnimation className="leading-7" showCursor={false} typeSpeed={3} delay={9000}>Connecting to netlify servers</TypingAnimation>
               <TypingAnimation className="leading-7 text-[#82cf90] font-bold" showCursor={false} typeSpeed={0} delay={10000}>200:OK</TypingAnimation>
 
@@ -107,17 +140,20 @@ export default function PortfolioPage() {
               <div className="pt-5 " />
 
               {!show ? null :
-                <div className="items-left">
+                <div className="flex md:flex-row md:items-center flex-col  gap-3 items-left">
                   <Button
                     variant="default"
-                    className="bg-[#678491] hover:bg-[#aed1e1] text-[#13232a] rounded-none cursor-pointer"
+                    className="bg-[#678491] hover:bg-[#aed1e1] text-[#13232a] font-bold rounded-none cursor-pointer"
                     onClick={() => {
                       handleIntent();
                       intentConfirmEntrySound.play();
                     }}
                   >
-                    continue
+                    click here to continue
                   </Button>
+                  <TypingAnimation className="leading-7  font-bold text-[#678491]" showCursor={false} typeSpeed={30} delay={200}> OR just press ENTER ↵</TypingAnimation>
+
+                 
                 </div>
               }
             </div>

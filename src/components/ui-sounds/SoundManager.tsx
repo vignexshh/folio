@@ -22,3 +22,10 @@ export const intentConfirmEntrySound = new Howl({
     src: ["/ui_intent_entry.mp3"],
     volume:0.9,
 })
+
+
+
+export const sonnerAlert = new Howl({
+    src: ["/notif-sound-calm.mp3"],
+    volume:1,
+})
