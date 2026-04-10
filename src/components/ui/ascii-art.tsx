@@ -325,8 +325,8 @@ export const AsciiArt: React.FC<AsciiArtProps> = ({
                 MATRIX_CHARSET[
                   Math.floor(Math.random() * MATRIX_CHARSET.length)
                 ];
-              displayColor = "#00ff00";
-              ctx.shadowColor = "#00ff00";
+              displayColor = "#05edce";
+              ctx.shadowColor = "#05edce";
               ctx.shadowBlur = 5;
             } else {
               ctx.shadowBlur = 0;

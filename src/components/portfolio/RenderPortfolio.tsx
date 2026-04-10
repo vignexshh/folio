@@ -73,7 +73,7 @@ export default function Portfolio() {
                                     src="/pp.jpeg"
                                     resolution={100}
                                     color="#05edce"
-                                    animationStyle="typewriter"
+                                    animationStyle="matrix"
                                     animateOnView={false}
                                     animationDuration={0.1}
                                     className="mx-auto aspect-square w-full max-w-lg bg-black"

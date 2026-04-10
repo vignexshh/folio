@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 import { Button } from "@/components/ui/button";
 
-import Portfolio from "@/components/portfolio/RenderPortfio";
+import Portfolio from "@/components/portfolio/RenderPortfolio";
 import { staticRadioNoiseLoop } from "@/components/ui-sounds/SoundManager";
 
 import { GoMute } from "react-icons/go";
