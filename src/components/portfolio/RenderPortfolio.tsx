@@ -60,6 +60,8 @@ export default function Portfolio() {
         return () => clearTimeout(timer);
     }, []);
 
+    
+
     return (
         <CRTEffect enabled={true}
             sweepDuration={4}
@@ -126,6 +128,8 @@ export default function Portfolio() {
                             {/* nest terminal info from here  */}
                             <div className="flex flex-col w-62.5 items-left gap-2 border border-[#05edce7d] ">
 
+                                <div className="w-40"> 
+
                                 <AsciiArt
                                     src="/pp.jpeg"
                                     resolution={200}
@@ -135,24 +139,8 @@ export default function Portfolio() {
                                     animationDuration={0.1}
                                     className="mx-auto aspect-square w-full max-w-lg bg-black"
                                 />
-                                <AsciiArt
-                                    src="/pp.jpeg"
-                                    resolution={200}
-                                    color="#05edce"
-                                    animationStyle="matrix"
-                                    animateOnView={false}
-                                    animationDuration={0.1}
-                                    className="mx-auto aspect-square w-full max-w-lg bg-black"
-                                />
-                                <AsciiArt
-                                    src="/pp.jpeg"
-                                    resolution={200}
-                                    color="#05edce"
-                                    animationStyle="matrix"
-                                    animateOnView={false}
-                                    animationDuration={0.1}
-                                    className="mx-auto aspect-square w-full max-w-lg bg-black"
-                                />
+                                </div>
+                                
 
                                 <div className="text-left p-2">
                                     <TypographyH5>Software Engg • B'luru, India</TypographyH5>

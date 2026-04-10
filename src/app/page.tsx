@@ -1,8 +1,5 @@
 "use client";
 import type { Metadata } from "next";
-import Image from "next/image";
-import React from 'react';
-import TrafficLight from '@arvinxu/macos-traffic-light';
 import { useState, useEffect } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -12,7 +9,6 @@ import { staticRadioNoiseLoop } from "@/components/ui-sounds/SoundManager";
 
 import { GoMute } from "react-icons/go";
 import { GoUnmute } from "react-icons/go";
-import { TypeAnimation } from 'react-type-animation';
 import { TypingAnimation } from "@/components/ui/typing-animation";
 
 import { intentConfirmEntrySound } from "@/components/ui-sounds/SoundManager";
@@ -43,7 +39,7 @@ export default function PortfolioPage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShow(true);
-    }, 15000);
+    }, 10000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -65,18 +61,14 @@ export default function PortfolioPage() {
   useEffect(() => {
     const keyBoardMuteHandler = (e: KeyboardEvent) => {
       if (e.key === "m") {
-        
-        // intentConfirmEntrySound.play();
         handleAudio();
-        
-        
-
       }
     };
 
     window.addEventListener("keydown", keyBoardMuteHandler);
     return () => window.removeEventListener("keydown", keyBoardMuteHandler);
   }, []);
+  
 
 
 
@@ -114,26 +106,26 @@ export default function PortfolioPage() {
           <div className="h-screen flex flex-col gap-0 items-center justify-center bg-[#13232a] font-mono items-left text-[#678491]">
             <div className="flex flex-col overflow-hidden items-left">
               <TypingAnimation className="leading-7" showCursor={false} typeSpeed={0} delay={100}>Initializing portfolio system...</TypingAnimation>
-              <TypingAnimation className="leading-7" showCursor={false} typeSpeed={3} delay={2000}>Loading design tokens...</TypingAnimation>
-              <TypingAnimation className="leading-7" showCursor={false} typeSpeed={3} delay={3000}>Mounting component libaray...</TypingAnimation>
+              <TypingAnimation className="leading-7" showCursor={false} typeSpeed={1} delay={1000}>Loading design tokens...</TypingAnimation>
+              <TypingAnimation className="leading-7" showCursor={false} typeSpeed={1} delay={1500}>Mounting component libaray...</TypingAnimation>
               <div className="flex flex-row items-center gap-5">
-                <TypingAnimation className="leading-15 font-bold" showCursor={false} typeSpeed={50} delay={5000}>██████████████ </TypingAnimation>
-                <TypingAnimation className="leading-15 font-bold text-[#82cf90]" showCursor={false} typeSpeed={0} delay={6000}>done</TypingAnimation>
+                <TypingAnimation className="leading-15 font-bold" showCursor={false} typeSpeed={50} delay={3000}>██████████████ </TypingAnimation>
+                <TypingAnimation className="leading-15 font-bold text-[#82cf90]" showCursor={false} typeSpeed={0} delay={4000}>done</TypingAnimation>
               </div>
               <div className="p-5" />
 
-              <TypingAnimation className="leading-7 text-wrap" showCursor={false} typeSpeed={0} delay={7000}>Don't search for /secrets here</TypingAnimation>
-              <TypingAnimation className="leading-7" showCursor={false} typeSpeed={3} delay={8000}>Resolving 12 cases...</TypingAnimation>
-              <TypingAnimation className="leading-7" showCursor={false} typeSpeed={3} delay={9000}>Connecting to netlify servers</TypingAnimation>
-              <TypingAnimation className="leading-7 text-[#82cf90] font-bold" showCursor={false} typeSpeed={0} delay={10000}>200:OK</TypingAnimation>
+              <TypingAnimation className="leading-7 text-wrap" showCursor={false} typeSpeed={0} delay={5000}>Don't search for /secrets here</TypingAnimation>
+              <TypingAnimation className="leading-7" showCursor={false} typeSpeed={1} delay={6000}>{`Resolving ${Math.floor(Math.random() * (16 - 2 + 1)) + 2} cases...`}</TypingAnimation>
+              <TypingAnimation className="leading-7" showCursor={false} typeSpeed={1} delay={6500}>Connecting to netlify servers</TypingAnimation>
+              <TypingAnimation className="leading-7 text-[#82cf90] font-bold" showCursor={false} typeSpeed={0} delay={7000}>200:OK</TypingAnimation>
 
               <div className="p-5" />
 
 
-              <TypingAnimation className="leading-7" showCursor={false} typeSpeed={0} delay={12000}>+</TypingAnimation>
+              <TypingAnimation className="leading-7" showCursor={false} typeSpeed={0} delay={8000}>+</TypingAnimation>
               <div className="flex flex-row items-center gap-5">
-                <TypingAnimation className="leading-7  text-[#cf9482]" showCursor={false} typeSpeed={1} delay={12500}>vignesh.td v10.12.0</TypingAnimation>
-                <TypingAnimation className="leading-7" showCursor={false} typeSpeed={0} delay={14000}>[⬢] ready</TypingAnimation>
+                <TypingAnimation className="leading-7  text-[#cf9482]" showCursor={false} typeSpeed={1} delay={8000}>vignesh.td v10.12.0</TypingAnimation>
+                <TypingAnimation className="leading-7" showCursor={false} typeSpeed={0} delay={9000}>[⬢] ready</TypingAnimation>
 
               </div>
 
@@ -151,7 +143,7 @@ export default function PortfolioPage() {
                   >
                     click here to continue
                   </Button>
-                  <TypingAnimation className="leading-7  font-bold text-[#678491]" showCursor={false} typeSpeed={30} delay={200}> OR just press ENTER ↵</TypingAnimation>
+                  <TypingAnimation className="leading-7  font-bold text-[#678491]" showCursor={false} typeSpeed={10} delay={200}> OR just press ENTER ↵</TypingAnimation>
 
                  
                 </div>
